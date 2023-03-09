@@ -1,0 +1,118 @@
+ida pro sp1 7.7.220118
+================================
+fix: crash from ui, strange arrive big resolution size from hint
+file: idapro77sp1\platforms\qwindows.dll and idapro77sp1_new\platforms\qwindows.dll
+00068902: 33 31
+00068903: C9 F6
+00068904: 48 45
+00068905: 8D 31
+00068906: 4D FF
+00068907: AF E9
+00068908: 45 97
+00068909: 33 00
+0006890A: C0 00
+0006890B: 33 00
+
+================================
+fix: Btree error: cannot truncate database file: Permission denied
+file: idapro77sp1\ida64.dll and idapro77sp1_new\ida64.dll
+allow retry dialog for this error
+00298B1A: 2A 26
+
+file: idapro77sp1\ida.dll and idapro77sp1_new\ida.dll
+0028FADA: 2A 26
+
+================================
+fix: show unsigned comparison <,<=,>,=> with 0
+file: idapro77sp1\plugins\hexx64.dll and idapro77sp1_new\plugins\hexx64.dll
+000CC918: 0F 90
+000CC919: 85 E9
+
+file: idapro77sp1\plugins\hexrays.dll and idapro77sp1_new\plugins\hexrays.dll
+000C3C48: 0F 90
+000C3C49: 85 E9
+
+================================
+fix: show range unsigned comparison <,<=,>,=> with 0
+file: idapro77sp1\plugins\hexx64.dll and idapro77sp1_new\plugins\hexx64.dll
+001D5780: 40 32
+001D5781: 55 C0
+001D5782: 53 C3
+
+file: idapro77sp1\plugins\hexrays.dll and idapro77sp1_new\plugins\hexrays.dll
+00058410: 40 32
+00058411: 55 C0
+00058412: 53 C3
+
+================================
+enable debug dump by set environment IDA_DUMPDIR=file_path before start ida
+file: idapro77sp1\plugins\hexx64.dll and idapro77sp1_new\plugins\hexx64.dll
+
+allow use IDA_DUMPDIR
+00154E6E: 0F 90
+00154E6F: 84 90
+00154E70: D2 90
+00154E71: 00 90
+00154E72: 00 90
+00154E73: 00 90
+
+enable mba dump
+00159220: 0F 90
+00159221: 84 90
+00159222: C1 90
+00159223: 01 90
+00159224: 00 90
+00159225: 00 90
+
+enable mblock dump
+00158BF6: 0F 90
+00158BF7: 84 90
+00158BF8: A7 90
+00158BF9: 05 90
+00158BFA: 00 90
+00158BFB: 00 90
+
+mblock all dump - pass strncmp "debug" for all
+00158C36: 0F 90
+00158C37: 85 90
+00158C38: 67 90
+00158C39: 05 90
+00158C3A: 00 90
+00158C3B: 00 90
+
+file: idapro77sp1\plugins\hexrays.dll and idapro77sp1_new\plugins\hexrays.dll
+
+allow use IDA_DUMPDIR
+
+0015512E: 0F 90
+0015512F: 84 90
+00155130: D2 90
+00155131: 00 90
+00155132: 00 90
+00155133: 00 90
+
+enable mba dump
+00159460: 0F 90
+00159461: 84 90
+00159462: C1 90
+00159463: 01 90
+00159464: 00 90
+00159465: 00 90
+
+enable mblock dump
+00158E36: 0F 90
+00158E37: 84 90
+00158E38: A7 90
+00158E39: 05 90
+00158E3A: 00 90
+00158E3B: 00 90
+
+mblock all dump - pass strncmp "debug" for all
+00158E76: 0F 90
+00158E77: 85 90
+00158E78: 67 90
+00158E79: 05 90
+00158E7A: 00 90
+00158E7B: 00 90
+
+================================
