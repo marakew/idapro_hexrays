@@ -45,7 +45,7 @@ file: idapro77sp1\plugins\hexrays.dll and idapro77sp1_new\plugins\hexrays.dll
 00058412: 53 C3
 
 ================================
-enable debug dump by set environment IDA_DUMPDIR=file_path before start ida
+enable debug dump by set environment IDA_DUMPDIR=path before start ida
 file: idapro77sp1\plugins\hexx64.dll and idapro77sp1_new\plugins\hexx64.dll
 
 allow use IDA_DUMPDIR
@@ -83,7 +83,6 @@ mblock all dump - pass strncmp "debug" for all
 file: idapro77sp1\plugins\hexrays.dll and idapro77sp1_new\plugins\hexrays.dll
 
 allow use IDA_DUMPDIR
-
 0015512E: 0F 90
 0015512F: 84 90
 00155130: D2 90
